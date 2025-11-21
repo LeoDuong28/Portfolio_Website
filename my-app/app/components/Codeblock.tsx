@@ -4,6 +4,11 @@ import React, { useEffect, useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { monokai, atomOneLight } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
+
+
+
+
+
 const Codeblock: React.FC = () => {
     const [theme, setTheme] = useState<"light" | "dark">("light");
 
@@ -26,9 +31,9 @@ const Codeblock: React.FC = () => {
         return () => observer.disconnect();
     }, []);
 
-    const myCode = `    const coder = {
+    const myCode = `    const software_engineer = {
         name: 'Leo Duong',
-        skills: ['React', 'MySQL', 'MongoDB', 'Docker', 'AWS', 'VibeCoding'],
+        skills: ['React', 'Next.js', 'MySQL', 'Docker', 'AWS'],
         hardWorker: true,
         quickLeaner: true,
         problemsSolver: true,
@@ -65,6 +70,9 @@ const Codeblock: React.FC = () => {
 
 
 export default Codeblock;
+
+
+
 
 
 

@@ -63,10 +63,10 @@ export default function Navbar() {
             <div className={styles.left}>
                 <Link href="/" className={styles.logo}>
                     <Image
-                        src={theme === "light" ? "/logo_black.png" : "/logo.png"} 
+                        src={theme === "light" ? "/logo_black.png" : "/logo2.png"} 
                         alt="Leo Duong Logo"
-                        width={160}
-                        height={40}
+                        width={80}
+                        height={80}
                         priority
                         className={styles.logoImage}
                     />
