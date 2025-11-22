@@ -1,0 +1,127 @@
+.resumePage {
+  min-height: 100vh;
+  padding: 2.5rem 1.7rem 3rem;
+  background: var(--bg);
+  color: var(--text-color);
+}
+
+.resumeContainer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  font-size: 0.98rem;
+  color: var(--muted-text);
+  margin-bottom: 1.8rem;
+}
+
+.downloadWrapperTop,
+.downloadWrapperBottom {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.downloadWrapperBottom {
+  margin-top: 1.5rem;
+}
+
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.downloadButton:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.downloadIcon {
+  font-size: 1.1rem;
+}
+
+.viewerWrapper {
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  background: var(--bg-subtle);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+}
+
+.viewer {
+  width: 100%;
+  height: 80vh;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .resumePage {
+    padding: 2rem 1rem 2.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
+
+  .viewer {
+    height: 70vh;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
