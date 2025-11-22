@@ -34,10 +34,10 @@
 }
 
 .downloadButton {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-
   padding: 0.6rem 1.4rem;
   border-radius: 999px;
   border: 1px solid var(--border-color);
@@ -46,7 +46,7 @@
   font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
-
+  text-align: center;
   transition:
     background 0.2s ease,
     transform 0.15s ease,

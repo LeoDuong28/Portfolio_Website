@@ -63,7 +63,7 @@ export default function Navbar() {
             <div className={styles.left}>
                 <Link href="/" className={styles.logo}>
                     <Image
-                        src={theme === "light" ? "/logo_black.png" : "/logo2.png"} 
+                        src={theme === "light" ? "/logo_black1.png" : "/logo_black2.png"} 
                         alt="Leo Duong Logo"
                         width={80}
                         height={80}

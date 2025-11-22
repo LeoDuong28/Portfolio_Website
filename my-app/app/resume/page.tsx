@@ -9,9 +9,10 @@ export default function ResumePage() {
   return (
     <main className={styles.resumePage}>
       <section className={styles.resumeContainer}>
+        
         <h1 className={styles.title}>Resume</h1>
         <p className={styles.subtitle}>
-          View my resume below or download a copy using the buttons.
+          Please view my resume below and consider me a chance :)
         </p>
 
         <div className={styles.downloadWrapper}>
@@ -29,12 +30,6 @@ export default function ResumePage() {
           />
         </div>
 
-        <div className={styles.downloadWrapper}>
-          <a href={RESUME_PATH} download className={styles.downloadButton}>
-            <FaRegFilePdf className={styles.downloadIcon} />
-            Download Resume
-          </a>
-        </div>
       </section>
     </main>
   );
