@@ -3,6 +3,7 @@
 
 
 import Home from "./home/home";
+import About from "./about/page";
 
 
 
