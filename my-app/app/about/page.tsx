@@ -90,7 +90,7 @@ export default function AboutPage(): JSX.Element {
                 <li><strong>Email:</strong> <span className={styles.keyword}>duongtrongnghia287@gmail.com</span></li>
                 <li><strong>Phone:</strong> <span className={styles.keyword}>+1(424)-397-4074</span></li>
               <li><strong>Location:</strong> <span className={styles.keyword}>Torrance, California</span></li>
-              <li><strong>Degree:</strong> B.S. in <span className={styles.keyword}>Mathematics and Computer Science</span>, UC San Diego</li>
+              <li><strong>Degree:</strong> B.S. in <span className={styles.keyword}>Mathematics and Computer Science</span> from <span className={styles.keyword}>UC San Diego</span></li>
               <li><strong>Strengths:</strong> <span className={styles.keyword}>Hard Worker</span>, <span className={styles.keyword}>Problem Solver</span>, <span className={styles.keyword}>Team Player</span></li>
               <li><strong>Availability:</strong> <span className={styles.keyword}>Any shifts, any time for emergency</span></li>
               <li><strong>Travel:</strong> Willing to <span className={styles.keyword}>travel for work</span></li>
