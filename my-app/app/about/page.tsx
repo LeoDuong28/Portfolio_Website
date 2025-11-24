@@ -17,39 +17,24 @@ import {
 import { FaTools } from "react-icons/fa";
 import styles from "./page.module.css";
 import { GitHubCalendar } from "react-github-calendar";
-
-/**
- * NOTE: Using the uploaded local file path you provided earlier.
- * The build/deployment layer will transform this path to a usable URL.
- * Path: /mnt/data/A_digital_photograph_features_a_close-up_portrait_.png
- */
-const AVATAR_PUBLIC = "/mnt/data/A_digital_photograph_features_a_close-up_portrait_.png";
 const GITHUB_USERNAME = "LeoDuong28";
 
 export default function AboutPage(): JSX.Element {
-  // ref to calendar container
   const calendarRef = useRef<HTMLDivElement | null>(null);
-  // blockSize determined by container width
   const [blockSize, setBlockSize] = useState<number>(12);
   const [blockMargin, setBlockMargin] = useState<number>(4);
 
   useEffect(() => {
     if (!calendarRef.current) return;
-
     const container = calendarRef.current;
-
-    // compute block size based on width
     const computeSizes = (width: number) => {
-      // GitHub calendar displays about 53 columns (weeks in a year)
       const weeks = 53;
-      // choose a margin (gap) that scales slightly with size
-      // we limit blockMargin between 2 and 8
       const margin = Math.max(2, Math.min(8, Math.floor(width / 800 * 4)));
-      // compute block size to fit weeks and margins into width
-      const available = width - (weeks - 1) * margin - 32; // 32 px padding buffer
+
+      const available = width - (weeks - 1) * margin - 32;
       const rawBlock = Math.floor(available / weeks);
 
-      // clamp block size to reasonable bounds
+
       const minBlock = 6;
       const maxBlock = 22;
       const finalBlock = Math.max(minBlock, Math.min(maxBlock, rawBlock));
@@ -57,12 +42,12 @@ export default function AboutPage(): JSX.Element {
       return { finalBlock, margin };
     };
 
-    // initial compute
+
     const { finalBlock, margin } = computeSizes(container.clientWidth);
     setBlockSize(finalBlock);
     setBlockMargin(margin);
 
-    // observe resize
+
     const ro = new ResizeObserver((entries) => {
       for (const entry of entries) {
         const w = entry.contentRect.width;
@@ -80,10 +65,9 @@ export default function AboutPage(): JSX.Element {
   return (
     <section className={styles.about}>
       <div className={styles.container}>
-        {/* LEFT: Avatar + quick facts */}
-        <aside className={styles.left}>
-          
 
+
+        <aside className={styles.left}>
           <div className={styles.quick}>
             <h3 className={styles.quickTitle}>Quick Facts</h3>
             <ul className={styles.facts}>
@@ -101,14 +85,15 @@ export default function AboutPage(): JSX.Element {
           <div className={styles.hobbies}>
             <h3 className={styles.quickTitle}>Outside Coding</h3>
             <ul>
-              <li>🎮 Playing video games</li>
-              <li>✈️ Traveling & trying new cuisine</li>
-              <li>🕺 Break dancing</li>
+              <li>Playing video games 🎮</li>
+              <li>Traveling & trying new cuisine 🌎</li>
+              <li>Break dancing 🕺</li>
             </ul>
           </div>
         </aside>
 
-        {/* RIGHT: Intro, Skills, Tools, GitHub calendar */}
+
+
         <div className={styles.right}>
           <h2 className={styles.title}>About <span className={styles.pulse}>Me</span></h2>
 
@@ -160,7 +145,8 @@ export default function AboutPage(): JSX.Element {
             </div>
           </div>
 
-          {/* GitHub contributions - responsive */}
+
+
           <div className={styles.section}>
             <h4 className={styles.sectionTitle}>Coding Activity (this year)</h4>
 
