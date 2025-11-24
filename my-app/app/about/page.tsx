@@ -103,7 +103,7 @@ export default function AboutPage(): JSX.Element {
               <span className={styles.highlight}>Mathematics</span> and{" "}
               <span className={styles.highlight}>Computer Science</span> at UC San Diego.
               I thrive in collaborative teams, enjoy solving tricky problems, and adapt quickly across
-              stacks. I&apos;m available for immediate start, open to shift work and travel.
+              stacks. I&apos;m available for immediate start, open to any work shifts and travels.
             </p>
 
             <p className={styles.smallMuted}>

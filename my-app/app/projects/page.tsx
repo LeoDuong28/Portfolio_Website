@@ -22,14 +22,14 @@ type Project = {
 const projects: Project[] = [
   {
     id: "p1",
-    title: "Stinkbug — Titan Methane Survey",
+    title: "E-Commerce Website",
     short: "Mission design & analysis tools for detecting methane plumes on Titan.",
     description:
       "Full-stack mission planning portal with visualization of instrument footprints, simulated data ingestion and a lightweight analysis pipeline. Includes automated report generation and interactive maps.",
-    tech: ["TypeScript", "React", "Node.js", "Postgres"],
+    tech: ["TypeScript", "React", "Node.js", "Next.js", "HTML", "CSS"],
     repo: "https://github.com/your-username/stinkbug",
     demo: "https://stinkbug-demo.example.com",
-    image: THUMBNAIL,
+    image: "/project1.png",
     featured: true,
   },
   {
@@ -53,25 +53,7 @@ const projects: Project[] = [
     demo: "https://your-portfolio.example.com",
     image: THUMBNAIL,
   },
-  {
-    id: "p4",
-    title: "NGIMS Analysis Toolkit",
-    short: "Martian upper atmosphere analysis tools.",
-    description:
-      "Data ingestion and visualization pipeline for NGIMS datasets used in thermosphere analysis.",
-    tech: ["Python", "Jupyter", "Data Viz"],
-    repo: "https://github.com/your-username/ngims-toolkit",
-    image: THUMBNAIL,
-  },
-  {
-    id: "p5",
-    title: "Tooling Example",
-    short: "Extra project to test layout.",
-    description: "Extra project to confirm 4-per-row scaling.",
-    tech: ["Docker", "CI"],
-    repo: "https://github.com/your-username/tooling",
-    image: THUMBNAIL,
-  },
+  
 ];
 
 export default function ProjectsPage(): JSX.Element {
@@ -89,7 +71,7 @@ export default function ProjectsPage(): JSX.Element {
           </div>
 
           <div className={styles.ctaRow}>
-            <a className={styles.primaryBtn} href="https://github.com/your-username" target="_blank" rel="noreferrer">
+            <a className={styles.primaryBtn} href="https://github.com/LeoDuong28?tab=repositories" target="_blank" rel="noreferrer">
               <FaGithub /> View All on GitHub
             </a>
           </div>
