@@ -7,9 +7,8 @@ const RESUME_PATH = "/Leo_Duong_Resume.pdf";
 
 export default function ResumePage() {
   return (
-    <main className={styles.resumePage}>
+    <main id="resume" className={styles.resumePage}>
       <section className={styles.resumeContainer}>
-        
         <h1 className={styles.title}>Resume</h1>
         <p className={styles.subtitle}>
           Please view my resume below and consider me a chance :)
@@ -29,27 +28,7 @@ export default function ResumePage() {
             title="Leo Duong Resume"
           />
         </div>
-
       </section>
     </main>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
