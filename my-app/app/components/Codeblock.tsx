@@ -2,36 +2,37 @@
 
 import React, { useEffect, useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { monokai, atomOneLight } from "react-syntax-highlighter/dist/esm/styles/hljs";
-
-
-
-
-
+import {
+  monokai,
+  atomOneLight,
+} from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 const Codeblock: React.FC = () => {
-    const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
-    useEffect(() => {
-        if (typeof document === "undefined") return;
+  useEffect(() => {
+    if (typeof document === "undefined") return;
 
-        const getTheme = () => document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+    const getTheme = () =>
+      document.documentElement.getAttribute("data-theme") === "dark"
+        ? "dark"
+        : "light";
 
-        setTheme(getTheme());
+    setTheme(getTheme());
 
-        const observer = new MutationObserver(() => {
-            setTheme(getTheme());
-        });
+    const observer = new MutationObserver(() => {
+      setTheme(getTheme());
+    });
 
-        observer.observe(document.documentElement, {
-            attributes: true,
-            attributeFilter: ["data-theme"],
-        });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
 
-        return () => observer.disconnect();
-    }, []);
+    return () => observer.disconnect();
+  }, []);
 
-    const myCode = `    const software_engineer = {
+  const myCode = `    const software_engineer = {
         name: 'Leo Duong',
         skills: ['React', 'Next.js', 'MySQL', 'Docker', 'AWS'],
         hardWorker: true,
@@ -49,55 +50,21 @@ const Codeblock: React.FC = () => {
     };
     `;
 
-    return (
-        <SyntaxHighlighter
-            language="javascript"
-            style={theme === "dark" ? monokai: atomOneLight}
-            customStyle={{
-                background: "transparent",
-                margin: 0,
-                padding: "1rem",
-                borderRadius: "0.75rem",
-                fontSize: "0.85rem",
-            }}
-            showLineNumbers
-        >
-            {myCode}
-        </SyntaxHighlighter>
-    );
+  return (
+    <SyntaxHighlighter
+      language="javascript"
+      style={theme === "dark" ? monokai : atomOneLight}
+      customStyle={{
+        background: "transparent",
+        margin: 0,
+        padding: "1rem",
+        borderRadius: "0.75rem",
+        fontSize: "0.85rem",
+      }}
+      showLineNumbers>
+      {myCode}
+    </SyntaxHighlighter>
+  );
 };
 
-
-
 export default Codeblock;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

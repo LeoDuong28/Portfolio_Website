@@ -31,8 +31,13 @@
   background: #ff5f57;
 }
 
-.dot:nth-of-type(2) { background: #febc2e; }
-.dot:nth-of-type(3) { background: #28c840; }
+.dot:nth-of-type(2) {
+  background: #febc2e;
+}
+
+.dot:nth-of-type(3) {
+  background: #28c840;
+}
 
 .filename {
   margin-left: auto;
@@ -58,14 +63,30 @@
 }
 
 @keyframes wave-animation {
-  0%   { transform: rotate(0deg); }
-  10%  { transform: rotate(14deg); }
-  20%  { transform: rotate(-8deg); }
-  30%  { transform: rotate(14deg); }
-  40%  { transform: rotate(-4deg); }
-  50%  { transform: rotate(10deg); }
-  60%  { transform: rotate(0deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .homeContent {
@@ -146,7 +167,7 @@
 }
 
 .socialHeading {
-  font-size: 1.7rem; 
+  font-size: 1.7rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
   color: var(--text-color);
@@ -183,10 +204,7 @@
   color: var(--accent);
   border: none;
   font-size: 1.4rem;
-  transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease,
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease,
     box-shadow 0.2s ease;
 }
 
@@ -206,11 +224,8 @@
   box-shadow: 0 0 15px #00ffff;
 }
 
-
-
-
 .flipCard {
-  width: 280px; 
+  width: 280px;
   height: 280px;
   perspective: 1000px;
   margin: 0 auto;
@@ -241,8 +256,6 @@
 .backImage {
   transform: rotateY(180deg);
 }
-
-
 
 .introSection {
   display: flex;
@@ -284,34 +297,3 @@
     align-items: center;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

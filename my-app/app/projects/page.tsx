@@ -32,7 +32,7 @@ const projects: Project[] = [
     tech: ["TypeScript", "React", "Node.js", "Next.js", "HTML", "CSS"],
     repo: "https://github.com/your-username/stinkbug",
     demo: "https://stinkbug-demo.example.com",
-    image: "/project1.png",
+    image: "/Porfolio_Website_Project_Picture.png",
     featured: true,
   },
   {

@@ -1,12 +1,9 @@
-/* === ABOUT PAGE STYLES (polished) === */
-
 .about {
   padding: 3.5rem 1.6rem;
   background: var(--bg);
   color: var(--text-color);
 }
 
-/* layout */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -17,7 +14,6 @@
   padding-bottom: 2.5rem;
 }
 
-/* -------- LEFT COLUMN -------- */
 .left {
   display: flex;
   flex-direction: column;
@@ -45,7 +41,6 @@
   box-shadow: 0 12px 30px rgba(2, 6, 23, 0.06);
 }
 
-/* quick facts */
 .quickTitle {
   margin: 0 0 0.6rem;
   font-size: 1.05rem;
@@ -70,7 +65,6 @@
   color: var(--text-color);
 }
 
-/* inline keyword highlight */
 .keyword {
   display: inline-block;
   background: linear-gradient(
@@ -85,7 +79,6 @@
   margin-left: 0.2rem;
 }
 
-/* hobbies box */
 .hobbies {
   padding: 0.7rem;
   border-radius: 12px;
@@ -94,14 +87,12 @@
   font-size: 0.95rem;
 }
 
-/* -------- RIGHT COLUMN -------- */
 .right {
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
 }
 
-/* header */
 .title {
   font-size: 1.6rem;
   margin: 0;
@@ -113,7 +104,6 @@
   color: var(--accent);
 }
 
-/* intro card */
 .introCard {
   padding: 1.3rem;
   border-radius: 12px;
@@ -130,7 +120,6 @@
   font-size: 0.95rem;
 }
 
-/* -------- SKILLS -------- */
 .section {
   margin-top: 0.4rem;
 }
@@ -151,7 +140,6 @@
   gap: 0.9rem;
 }
 
-/* group */
 .skillGroup {
   padding: 0.6rem;
   border-radius: 10px;
@@ -167,7 +155,6 @@
   color: var(--text-color);
 }
 
-/* chips */
 .chips {
   display: flex;
   flex-direction: column;
@@ -193,31 +180,38 @@
   box-shadow: 0 8px 24px rgba(12, 60, 100, 0.06);
 }
 
-/* icon color helpers (keeps icons visible in both themes) */
 .iconTS {
   color: #3178c6;
-} /* TypeScript */
+}
+
 .iconJS {
   color: #f0db4f;
-} /* JS */
+}
+
 .iconHtml {
   color: #f06529;
 }
+
 .iconCss {
   color: #2965f1;
 }
+
 .iconPy {
   color: #3572a5;
-} /* Python */
+}
+
 .iconCPlusPlus {
   color: #00599c;
-} /* C++ */
+}
+
 .iconC {
   color: #00599c;
 }
+
 .iconJava {
   color: #ed8b00;
 }
+
 .iconLatex {
   color: #03c03c;
 }
@@ -225,53 +219,63 @@
 .iconReact {
   color: #61dafb;
 }
+
 .iconNext {
   color: #0070f3;
 }
+
 .iconNode {
   color: #68a063;
 }
+
 .iconDocker {
   color: #0db7ed;
 }
+
 .iconGit {
   color: #f1502f;
 }
+
 .iconPostgre {
   color: #31648c;
 }
+
 .iconMysql {
   color: #00758f;
 }
+
 .iconTailwind {
   color: #06b6d4;
 }
+
 .iconBootstrap {
   color: #563d7c;
 }
+
 .iconMongodb {
   color: #00ed64;
 }
+
 .iconVim {
   color: #019733;
 }
+
 .iconAws {
   color: #ff9900;
 }
+
 .iconVscode {
   color: #0078d7;
 }
+
 .iconEclipse {
   color: #271a56;
 }
-
-/* -------- CALENDAR / GITHUB -------- */
 
 .calendarWrap {
   margin-top: 0.6rem;
 }
 
-/* container card for the calendar (light/dark neutral) */
 .calendarCard {
   border-radius: 12px;
   padding: 18px;
@@ -284,7 +288,6 @@
   box-shadow: 0 10px 30px rgba(2, 6, 23, 0.04);
 }
 
-/* center the calendar and keep it responsive */
 .reactGithubCalendar {
   display: flex;
   justify-content: center;

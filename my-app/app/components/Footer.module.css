@@ -1,13 +1,13 @@
 .footer {
-    width: 100%;
-    padding: 1rem 2rem;
-    background: var(--bg-subtle);
-    border-top: 1px solid var(--border-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--muted-text);
-    font-size: 0.9rem;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--bg-subtle);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted-text);
+  font-size: 0.9rem;
 }
 
 .text {
@@ -47,25 +47,3 @@
     gap: 0.4rem;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

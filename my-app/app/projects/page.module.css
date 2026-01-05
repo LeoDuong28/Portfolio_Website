@@ -5,7 +5,6 @@
   min-height: 100vh;
 }
 
-/* header */
 .header {
   margin-bottom: 1rem;
 }
@@ -51,7 +50,6 @@
   transition: transform 120ms ease, box-shadow 140ms ease, opacity 120ms ease;
 }
 
-/* button hover only (no card hover) */
 .primaryBtn:hover,
 .ghostBtn:hover {
   transform: translateY(-3px);
@@ -73,7 +71,6 @@
   cursor: pointer;
 }
 
-/* featured */
 .featured {
   max-width: 1200px;
   margin: 1rem auto 1.6rem;
@@ -94,31 +91,35 @@
 .featureLeft {
   flex: 1;
 }
+
 .featureTitle {
   margin: 0;
   font-size: 1.1rem;
   font-weight: 800;
 }
+
 .featureShort {
   margin: 6px 0 0 0;
   color: var(--muted-text);
 }
+
 .featureActions {
   margin-top: 10px;
   display: flex;
   gap: 0.6rem;
 }
+
 .featureRight {
   width: 220px;
   display: flex;
   justify-content: flex-end;
 }
+
 .featureImage {
   border-radius: 8px;
   object-fit: cover;
 }
 
-/* Grid: 4 columns to fit 4 projects on wide screens */
 .gridWrap {
   max-width: 1200px;
   margin: 0 auto;
@@ -131,7 +132,6 @@
   gap: 0.9rem;
 }
 
-/* Card: reduced padding and height to make them smaller */
 .card {
   display: flex;
   flex-direction: column;
@@ -145,14 +145,13 @@
   outline: none;
 }
 
-/* remove hover transform from card; only subtle shadow on focus/hover to indicate focus */
 .card:focus,
 .card:hover {
   box-shadow: 0 12px 30px rgba(2, 6, 23, 0.06);
 }
 
 .thumb {
-  height: 110px; /* smaller thumbnail */
+  height: 110px;
   width: 100%;
   position: relative;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.01));
@@ -189,6 +188,7 @@
   flex-wrap: wrap;
   margin-top: 6px;
 }
+
 .tag {
   padding: 0.22rem 0.46rem;
   border-radius: 999px;
@@ -206,21 +206,19 @@
   align-items: center;
 }
 
-/* Drawer — keeps as before */
 .drawer {
   position: fixed;
   inset: 0;
   z-index: 9999;
   display: grid;
   place-items: center;
-  padding: 16px; /* keeps spacing on small screens */
+  padding: 16px;
 }
 
-/* Backdrop layer: ALWAYS covers the full viewport */
 .drawerBackdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* tweak opacity */
+  background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
@@ -247,6 +245,7 @@
   cursor: pointer;
   color: var(--muted-text);
 }
+
 .drawerContent {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -278,6 +277,7 @@
   gap: 0.5rem;
   flex-wrap: wrap;
 }
+
 .tagLarge {
   padding: 0.32rem 0.6rem;
   border-radius: 999px;
@@ -286,6 +286,7 @@
   color: var(--accent);
   border: 1px solid rgba(9, 105, 218, 0.06);
 }
+
 .drawerActions {
   padding-top: 0.6rem;
   display: flex;
@@ -293,7 +294,6 @@
   margin-top: auto;
 }
 
-/* Footer fix: center content and match theme colors */
 .siteFooter {
   margin-top: 2.4rem;
   padding: 1.5rem 1.6rem;
@@ -339,7 +339,6 @@
   color: var(--muted-text);
 }
 
-/* responsive */
 @media (max-width: 1200px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
@@ -373,6 +372,7 @@
     justify-content: flex-start;
   }
 }
+
 .drawerDesc {
   list-style: disc !important;
   padding-left: 20px !important;
