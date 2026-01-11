@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import { SiIndeed, SiGmail } from "react-icons/si";
+import { SiIndeed } from "react-icons/si";
 import Type from "../components/Type";
 import Codeblock from "../components/Codeblock";
 import styles from "./home.module.css";
@@ -48,20 +47,22 @@ export default function Home() {
           <div className={styles.introRight}>
             <div className={styles.flipCard}>
               <div className={styles.flipInner}>
-                <Image
+                <img
                   src={asset("avatar.png")}
                   alt="avatar"
                   width={400}
                   height={400}
                   className={styles.avatarImage}
+                  loading="eager"
                 />
 
-                <Image
+                <img
                   src={asset("avatar2.png")}
                   alt="leo-photo"
                   width={400}
                   height={400}
                   className={`${styles.avatarImage} ${styles.backImage}`}
+                  loading="eager"
                 />
               </div>
             </div>
