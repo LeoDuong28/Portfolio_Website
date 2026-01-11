@@ -13,7 +13,7 @@ import { CgFileDocument } from "react-icons/cg";
 
 interface NavItem {
   label: string;
-  href: string; // "#home"
+  href: string;
   icon: React.ReactNode;
 }
 
@@ -32,32 +32,26 @@ export default function Navbar() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [activeHash, setActiveHash] = useState<string>("#home");
 
-  // helps prevent highlight jitter during smooth scroll
   const isProgrammaticScrollRef = useRef(false);
   const programmaticTimerRef = useRef<number | null>(null);
 
-  // ✅ Always start at top on reload (before paint)
   useLayoutEffect(() => {
     if (typeof window === "undefined") return;
 
-    // prevent browser from restoring last scroll position on reload/back/forward
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
     }
 
-    // remove hash so browser doesn't jump to it on refresh
     if (window.location.hash) {
       window.history.replaceState(null, "", window.location.pathname);
     }
 
-    // force top (twice to beat some browsers' restore behavior)
     window.scrollTo(0, 0);
     requestAnimationFrame(() => window.scrollTo(0, 0));
 
     setActiveHash("#home");
   }, []);
 
-  // Theme init
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -75,11 +69,10 @@ export default function Navbar() {
     setTheme(preferred);
   }, []);
 
-  // ✅ Highlight nav item based on scroll position (reliable)
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const ids = navItems.map((n) => n.href.slice(1)); // ["home","about","projects","resume"]
+    const ids = navItems.map((n) => n.href.slice(1));
 
     const getNavHeight = () => {
       const navEl = document.querySelector(
@@ -92,7 +85,7 @@ export default function Navbar() {
       if (isProgrammaticScrollRef.current) return;
 
       const navH = getNavHeight();
-      const offsetLine = navH + 16; // line just below sticky navbar
+      const offsetLine = navH + 16;
 
       let current = "#home";
       for (const id of ids) {
