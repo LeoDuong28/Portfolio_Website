@@ -162,7 +162,7 @@ export default function Navbar() {
           className={styles.logo}
           onClick={(e) => {
             e.preventDefault();
-            window.location.reload();
+            window.location.href = asset("");
           }}>
           <Image
             src={
