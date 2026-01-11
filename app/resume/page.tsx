@@ -31,7 +31,7 @@ export default function ResumePage() {
 
         <div className={styles.viewerWrapper}>
           <iframe
-            src={resumeUrl}
+            src={RESUME_FILE}
             className={styles.viewer}
             title="Leo Duong Resume"
           />
