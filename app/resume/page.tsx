@@ -4,6 +4,7 @@ import React from "react";
 import { FaRegFilePdf } from "react-icons/fa";
 import styles from "./page.module.css";
 import { asset } from "@/app/lib/asset";
+
 const RESUME_FILE = "leo_duong_resume.pdf";
 
 export default function ResumePage() {

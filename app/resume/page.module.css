@@ -22,8 +22,7 @@
   margin-bottom: 1.8rem;
 }
 
-.downloadWrapperTop,
-.downloadWrapperBottom {
+.downloadWrapper {
   display: flex;
   justify-content: center;
   margin-bottom: 1.5rem;
@@ -34,7 +33,7 @@
 }
 
 .downloadButton {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;

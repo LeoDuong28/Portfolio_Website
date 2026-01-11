@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import styles from "./page.module.css";
 import { asset } from "@/app/lib/asset";
@@ -144,12 +143,11 @@ export default function ProjectsPage() {
               onClick={() => setActive(p)}
               onKeyDown={(e) => e.key === "Enter" && setActive(p)}>
               <div className={styles.thumb}>
-                <Image
+                <img
                   src={imageUrl(p.imageFile)}
                   alt={p.title}
-                  width={640}
-                  height={360}
                   className={styles.thumbImg}
+                  loading="lazy"
                 />
               </div>
 
@@ -210,12 +208,11 @@ export default function ProjectsPage() {
 
             <div className={styles.drawerContent}>
               <div className={styles.drawerLeft}>
-                <Image
+                <img
                   src={imageUrl(active.imageFile)}
                   alt={active.title}
-                  width={720}
-                  height={420}
                   className={styles.drawerImage}
+                  loading="eager"
                 />
               </div>
 
