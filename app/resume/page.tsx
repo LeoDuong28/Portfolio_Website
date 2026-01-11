@@ -16,7 +16,10 @@ export default function ResumePage() {
         </p>
 
         <div className={styles.downloadWrapper}>
-          <a href={RESUME_PATH} download className={styles.downloadButton}>
+          <a
+            href={asset("leo_duong_resume.pdf")}
+            download
+            className={styles.downloadButton}>
             <FaRegFilePdf className={styles.downloadIcon} />
             Download Resume
           </a>

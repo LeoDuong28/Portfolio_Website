@@ -1,6 +1,7 @@
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export function asset(path: string) {
+  if (!path) return basePath || "/";
   if (!path.startsWith("/")) path = `/${path}`;
   return `${basePath}${path}`;
 }
