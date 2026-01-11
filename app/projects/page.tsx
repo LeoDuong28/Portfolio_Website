@@ -6,7 +6,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import styles from "./page.module.css";
 import { asset } from "@/app/lib/asset";
 
-const THUMBNAIL = "./";
+const THUMBNAIL = asset("thumbnail.png");
 
 type Project = {
   id: string;
@@ -27,12 +27,11 @@ const projects: Project[] = [
     short:
       "Designed and built a responsive React portfolio to showcase projects, skills, and professional experience.",
     description: [
-      "Showcased professional work by building a responsive React portfolio, improving recruiter engagement by 30%.",
-      "Integrated GitHub and LinkedIn APIs to dynamically display projects and credentials, enhancing user experience.",
+      "Built a responsive portfolio using React and Next.js, improving recruiter engagement by 30%.",
+      "Integrated GitHub and LinkedIn data to dynamically showcase projects and credentials.",
     ],
-    tech: ["TypeScript", "React", "Node.js", "Next.js", "HTML", "CSS"],
-    repo: "https://github.com/your-username/stinkbug",
-    demo: "https://stinkbug-demo.example.com",
+    tech: ["TypeScript", "React", "Next.js", "HTML", "CSS"],
+    repo: "https://github.com/LeoDuong28/Portfolio_Website",
     image: asset("portfolio_website.png"),
     featured: true,
   },
@@ -40,75 +39,67 @@ const projects: Project[] = [
     id: "p2",
     title: "E-Commerce Website",
     short:
-      "Developed a full-stack shopping platform with secure authentication, payments, and scalable backend services.",
+      "Developed a full-stack shopping platform with secure authentication and scalable backend services.",
     description: [
-      "Showcased professional work by building a responsive React portfolio, improving recruiter engagement by 30%.",
-      "Integrated GitHub and LinkedIn APIs to dynamically display projects and credentials, enhancing user experience.",
+      "Implemented product browsing, cart, and checkout flows with secure user authentication.",
+      "Designed scalable backend APIs to support inventory and order management.",
     ],
-    tech: ["C++", "Algorithms"],
-    repo: "https://github.com/your-username/huffman-cli",
+    tech: ["React", "Node.js", "MongoDB"],
     image: asset("e_commerce_website.png"),
   },
   {
     id: "p3",
     title: "Blue-Green Deployment CI/CD Pipeline",
     short:
-      "Implemented a zero-downtime CI/CD pipeline using cloud infrastructure automation and containerized deployments.",
+      "Implemented a zero-downtime CI/CD pipeline using automated cloud infrastructure.",
     description: [
-      "Showcased professional work by building a responsive React portfolio, improving recruiter engagement by 30%.",
-      "Integrated GitHub and LinkedIn APIs to dynamically display projects and credentials, enhancing user experience.",
+      "Built a blue-green deployment strategy to enable zero-downtime releases.",
+      "Automated build, test, and deployment stages using CI/CD pipelines.",
     ],
-    tech: ["Next.js", "TypeScript", "TailwindCSS"],
-    repo: "https://github.com/your-username/portfolio",
-    demo: "https://your-portfolio.example.com",
+    tech: ["CI/CD", "Docker", "Cloud"],
     image: asset("blue_green_deployment.jpg"),
   },
   {
     id: "p4",
     title: "Real-Time Chat Application",
     short:
-      "Built a secure, real-time messaging application using WebSockets with persistent data storage and authentication.",
+      "Built a secure real-time messaging app using WebSockets and persistent storage.",
     description: [
-      "Showcased professional work by building a responsive React portfolio, improving recruiter engagement by 30%.",
-      "Integrated GitHub and LinkedIn APIs to dynamically display projects and credentials, enhancing user experience.",
+      "Implemented real-time communication with WebSocket-based messaging.",
+      "Added authentication and persistent message storage.",
     ],
-    tech: ["Next.js", "TypeScript", "TailwindCSS"],
-    repo: "https://github.com/your-username/portfolio",
-    demo: "https://your-portfolio.example.com",
+    tech: ["Next.js", "WebSockets", "TypeScript"],
     image: asset("real_time_chat.jpg"),
   },
   {
     id: "p5",
-    title: "Nexflix Clone",
+    title: "Netflix Clone",
     short:
-      "Created a full-stack streaming platform clone with optimized APIs, dynamic content loading, and cloud deployment.",
+      "Created a streaming platform clone with dynamic content loading and optimized APIs.",
     description: [
-      "Showcased professional work by building a responsive React portfolio, improving recruiter engagement by 30%.",
-      "Integrated GitHub and LinkedIn APIs to dynamically display projects and credentials, enhancing user experience.",
+      "Built a responsive UI inspired by Netflix with dynamic content rendering.",
+      "Optimized API usage to reduce load times and improve performance.",
     ],
-    tech: ["Next.js", "TypeScript", "TailwindCSS"],
-    repo: "https://github.com/your-username/portfolio",
-    demo: "https://your-portfolio.example.com",
+    tech: ["Next.js", "TypeScript"],
     image: asset("netflix_clone.jpg"),
   },
   {
     id: "p6",
     title: "Movie Recommender System",
     short:
-      "Developed a recommendation engine using collaborative and content-based filtering to deliver personalized movie suggestions.",
+      "Developed a recommendation engine delivering personalized movie suggestions.",
     description: [
-      "Showcased professional work by building a responsive React portfolio, improving recruiter engagement by 30%.",
-      "Integrated GitHub and LinkedIn APIs to dynamically display projects and credentials, enhancing user experience.",
+      "Implemented collaborative and content-based filtering algorithms.",
+      "Improved recommendation accuracy through feature engineering.",
     ],
-    tech: ["Next.js", "TypeScript", "TailwindCSS"],
-    repo: "https://github.com/your-username/portfolio",
-    demo: "https://your-portfolio.example.com",
+    tech: ["Algorithms", "Data Processing"],
     image: asset("movie_recommend.jpeg"),
   },
 ];
 
 export default function ProjectsPage() {
   const [active, setActive] = useState<Project | null>(null);
+
   useEffect(() => {
     if (!active) return;
     const prev = document.body.style.overflow;
@@ -125,15 +116,14 @@ export default function ProjectsPage() {
           <div>
             <h1 className={styles.title}>Projects</h1>
             <p className={styles.subtitle}>
-              Selected work — click a card for more details. Each project links
-              to source and a live demo when available.
+              Selected work — click a card for more details.
             </p>
           </div>
 
           <div className={styles.ctaRow}>
             <a
               className={styles.primaryBtn}
-              href={asset("https://github.com/LeoDuong28?tab=repositories")}
+              href="https://github.com/LeoDuong28?tab=repositories"
               target="_blank"
               rel="noreferrer">
               <FaGithub /> View All on GitHub
@@ -172,30 +162,6 @@ export default function ProjectsPage() {
                     </span>
                   ))}
                 </div>
-
-                <div className={styles.cardActions}>
-                  {p.repo && (
-                    <a
-                      className={styles.ghostBtn}
-                      href={p.repo}
-                      target="_blank"
-                      rel="noreferrer"
-                      onClick={(e) => e.stopPropagation()}>
-                      <FaGithub /> Source
-                    </a>
-                  )}
-
-                  {p.demo && (
-                    <a
-                      className={styles.primaryBtn}
-                      href={p.demo}
-                      target="_blank"
-                      rel="noreferrer"
-                      onClick={(e) => e.stopPropagation()}>
-                      <FaExternalLinkAlt /> Live Demo
-                    </a>
-                  )}
-                </div>
               </div>
             </article>
           ))}
@@ -215,6 +181,7 @@ export default function ProjectsPage() {
               aria-label="Close">
               ×
             </button>
+
             <div className={styles.drawerContent}>
               <div className={styles.drawerLeft}>
                 <Image
@@ -228,6 +195,7 @@ export default function ProjectsPage() {
 
               <div className={styles.drawerRight}>
                 <h2 className={styles.drawerTitle}>{active.title}</h2>
+
                 <ul className={styles.drawerDesc}>
                   {active.description.map((line, i) => (
                     <li key={i}>{line}</li>
@@ -252,6 +220,7 @@ export default function ProjectsPage() {
                       <FaGithub /> View Source
                     </a>
                   )}
+
                   {active.demo && (
                     <a
                       className={styles.primaryBtn}
