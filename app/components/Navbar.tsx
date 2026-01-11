@@ -167,8 +167,8 @@ export default function Navbar() {
           <Image
             src={
               theme === "light"
-                ? asset("/logo_black1.png")
-                : asset("/logo_black2.png")
+                ? asset("logo_black1.png")
+                : asset("logo_black2.png")
             }
             alt="Leo Duong Logo"
             width={80}

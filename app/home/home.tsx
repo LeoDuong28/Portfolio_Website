@@ -49,7 +49,7 @@ export default function Home() {
             <div className={styles.flipCard}>
               <div className={styles.flipInner}>
                 <Image
-                  src={asset("/avatar.png")}
+                  src={asset("avatar.png")}
                   alt="avatar"
                   width={400}
                   height={400}
@@ -57,7 +57,7 @@ export default function Home() {
                 />
 
                 <Image
-                  src={asset("/avatar2.png")}
+                  src={asset("avatar2.png")}
                   alt="leo-photo"
                   width={400}
                   height={400}
