@@ -4,9 +4,11 @@ import React from "react";
 import { FaRegFilePdf } from "react-icons/fa";
 import styles from "./page.module.css";
 import { asset } from "@/app/lib/asset";
-const RESUME_PATH = "/Leo_Duong_Resume.pdf";
+const RESUME_FILE = "leo_duong_resume.pdf";
 
 export default function ResumePage() {
+  const resumeUrl = asset(RESUME_FILE);
+
   return (
     <main id="resume" className={styles.resumePage}>
       <section className={styles.resumeContainer}>
@@ -17,9 +19,10 @@ export default function ResumePage() {
 
         <div className={styles.downloadWrapper}>
           <a
-            href={asset("leo_duong_resume.pdf")}
+            href={resumeUrl}
             download
-            className={styles.downloadButton}>
+            className={styles.downloadButton}
+            aria-label="Download resume PDF">
             <FaRegFilePdf className={styles.downloadIcon} />
             Download Resume
           </a>
@@ -27,7 +30,7 @@ export default function ResumePage() {
 
         <div className={styles.viewerWrapper}>
           <iframe
-            src={asset("leo_duong_resume.pdf")}
+            src={resumeUrl}
             className={styles.viewer}
             title="Leo Duong Resume"
           />
