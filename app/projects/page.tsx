@@ -106,7 +106,7 @@ const projects: Project[] = [
   },
 ];
 
-export default function ProjectsPage(): JSX.Element {
+export default function ProjectsPage() {
   const [active, setActive] = useState<Project | null>(null);
   useEffect(() => {
     if (!active) return;
