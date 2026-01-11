@@ -6,7 +6,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import styles from "./page.module.css";
 import { asset } from "@/app/lib/asset";
 
-const THUMBNAIL = asset("thumbnail.png");
+const THUMBNAIL_FILE = "portfolio_website.png";
 
 type Project = {
   id: string;
@@ -16,7 +16,7 @@ type Project = {
   tech: string[];
   repo?: string;
   demo?: string;
-  image?: string;
+  imageFile?: string;
   featured?: boolean;
 };
 
@@ -32,7 +32,7 @@ const projects: Project[] = [
     ],
     tech: ["TypeScript", "React", "Next.js", "HTML", "CSS"],
     repo: "https://github.com/LeoDuong28/Portfolio_Website",
-    image: asset("portfolio_website.png"),
+    imageFile: "portfolio_website.png",
     featured: true,
   },
   {
@@ -45,7 +45,7 @@ const projects: Project[] = [
       "Designed scalable backend APIs to support inventory and order management.",
     ],
     tech: ["React", "Node.js", "MongoDB"],
-    image: asset("e_commerce_website.png"),
+    imageFile: "e_commerce_website.png",
   },
   {
     id: "p3",
@@ -57,7 +57,7 @@ const projects: Project[] = [
       "Automated build, test, and deployment stages using CI/CD pipelines.",
     ],
     tech: ["CI/CD", "Docker", "Cloud"],
-    image: asset("blue_green_deployment.jpg"),
+    imageFile: "blue_green_deployment.jpg",
   },
   {
     id: "p4",
@@ -69,7 +69,7 @@ const projects: Project[] = [
       "Added authentication and persistent message storage.",
     ],
     tech: ["Next.js", "WebSockets", "TypeScript"],
-    image: asset("real_time_chat.jpg"),
+    imageFile: "real_time_chat.jpg",
   },
   {
     id: "p5",
@@ -81,7 +81,7 @@ const projects: Project[] = [
       "Optimized API usage to reduce load times and improve performance.",
     ],
     tech: ["Next.js", "TypeScript"],
-    image: asset("netflix_clone.jpg"),
+    imageFile: "netflix_clone.jpg",
   },
   {
     id: "p6",
@@ -93,7 +93,7 @@ const projects: Project[] = [
       "Improved recommendation accuracy through feature engineering.",
     ],
     tech: ["Algorithms", "Data Processing"],
-    image: asset("movie_recommend.jpeg"),
+    imageFile: "movie_recommend.jpeg",
   },
 ];
 
@@ -108,6 +108,8 @@ export default function ProjectsPage() {
       document.body.style.overflow = prev;
     };
   }, [active]);
+
+  const imageUrl = (file?: string) => asset(file || THUMBNAIL_FILE);
 
   return (
     <main id="projects" className={styles.page}>
@@ -143,7 +145,7 @@ export default function ProjectsPage() {
               onKeyDown={(e) => e.key === "Enter" && setActive(p)}>
               <div className={styles.thumb}>
                 <Image
-                  src={p.image || THUMBNAIL}
+                  src={imageUrl(p.imageFile)}
                   alt={p.title}
                   width={640}
                   height={360}
@@ -161,6 +163,30 @@ export default function ProjectsPage() {
                       {t}
                     </span>
                   ))}
+                </div>
+
+                <div className={styles.cardActions}>
+                  {p.repo && (
+                    <a
+                      className={styles.ghostBtn}
+                      href={p.repo}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}>
+                      <FaGithub /> Source
+                    </a>
+                  )}
+
+                  {p.demo && (
+                    <a
+                      className={styles.primaryBtn}
+                      href={p.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}>
+                      <FaExternalLinkAlt /> Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
@@ -185,7 +211,7 @@ export default function ProjectsPage() {
             <div className={styles.drawerContent}>
               <div className={styles.drawerLeft}>
                 <Image
-                  src={active.image || THUMBNAIL}
+                  src={imageUrl(active.imageFile)}
                   alt={active.title}
                   width={720}
                   height={420}
@@ -220,7 +246,6 @@ export default function ProjectsPage() {
                       <FaGithub /> View Source
                     </a>
                   )}
-
                   {active.demo && (
                     <a
                       className={styles.primaryBtn}
