@@ -106,15 +106,11 @@ export default function AboutPage() {
               <li>
                 <strong>Availability:</strong>{" "}
                 <span className={styles.keyword}>
-                  Any shifts, any time for emergency
+                  Open to Any Shift, Overtime and Relocate Anywhere
                 </span>
               </li>
               <li>
-                <strong>Travel:</strong> Willing to{" "}
-                <span className={styles.keyword}>travel for work</span>
-              </li>
-              <li>
-                <strong>Languages:</strong> Fluent in{" "}
+                <strong>Languages:</strong> Native in{" "}
                 <span className={styles.keyword}>Vietnamese</span>
               </li>
             </ul>
