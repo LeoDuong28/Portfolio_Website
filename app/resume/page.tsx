@@ -8,6 +8,7 @@ import { asset } from "@/app/lib/asset";
 const RESUME_FILE = "leo_duong_resume.pdf";
 
 export default function ResumePage() {
+  // With your new asset.ts, this becomes "./leo_duong_resume.pdf"
   const resumeUrl = asset(RESUME_FILE);
 
   return (
@@ -21,17 +22,18 @@ export default function ResumePage() {
         <div className={styles.downloadWrapper}>
           <a
             href={resumeUrl}
-            download
+            target="_blank"
+            rel="noreferrer"
             className={styles.downloadButton}
-            aria-label="Download resume PDF">
+            aria-label="Open resume PDF">
             <FaRegFilePdf className={styles.downloadIcon} />
-            Download Resume
+            Open Resume (PDF)
           </a>
         </div>
 
         <div className={styles.viewerWrapper}>
           <iframe
-            src={RESUME_FILE}
+            src={resumeUrl}
             className={styles.viewer}
             title="Leo Duong Resume"
           />
