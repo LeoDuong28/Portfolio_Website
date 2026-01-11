@@ -158,7 +158,7 @@ export default function Navbar() {
     <header className={styles.navbar}>
       <div className={styles.left}>
         <a
-          href={asset("")}
+          href="./"
           className={styles.logo}
           onClick={(e) => {
             e.preventDefault();

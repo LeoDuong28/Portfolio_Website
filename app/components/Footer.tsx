@@ -27,7 +27,7 @@ export default function Footer() {
         </a>
 
         <a
-          href="www.linkedin.com/in/leo-duong-836334280"
+          href="https://www.linkedin.com/in/leo-duong-836334280/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"

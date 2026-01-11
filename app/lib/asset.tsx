@@ -1,17 +1,19 @@
-export function getBasePath() {
-  if (typeof window !== "undefined") {
-    const parts = window.location.pathname.split("/").filter(Boolean);
-
-    if (parts.length > 0) return `/${parts[0]}`;
-    return "";
-  }
-
-  return process.env.NEXT_PUBLIC_BASE_PATH || "";
-}
+// app/lib/asset.ts
 
 export function asset(path: string) {
-  const basePath = getBasePath();
-  if (!path) return basePath || "/";
-  if (!path.startsWith("/")) path = `/${path}`;
-  return `${basePath}${path}`;
+  // allow external links unchanged
+  if (/^https?:\/\//i.test(path)) return path;
+
+  // normalize
+  const clean = (path || "").replace(/^\/+/, "");
+
+  // asset("") should go to the site root (current directory)
+  if (!clean) return "./";
+
+  /**
+   * ✅ GitHub Pages safe:
+   * Use relative URLs so they resolve under /Portfolio_Website/
+   * Example: "avatar.png" -> /Portfolio_Website/avatar.png
+   */
+  return `./${clean}`;
 }

@@ -89,7 +89,7 @@ export default function Home() {
 
             <li className={styles.socialIcons}>
               <a
-                href="https://www.linkedin.com/in/your-linkedin"
+                href="https://www.linkedin.com/in/leo-duong-836334280/"
                 target="_blank"
                 rel="noreferrer"
                 className={styles.homeSocialIcons}>
