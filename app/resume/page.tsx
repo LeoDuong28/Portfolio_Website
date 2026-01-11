@@ -24,7 +24,7 @@ export default function ResumePage() {
 
         <div className={styles.viewerWrapper}>
           <iframe
-            src={asset("Leo_Duong_Resume.pdf")}
+            src={asset("leo_duong_resume.pdf")}
             className={styles.viewer}
             title="Leo Duong Resume"
           />

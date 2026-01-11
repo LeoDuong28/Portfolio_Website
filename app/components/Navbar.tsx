@@ -19,14 +19,14 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: "Home", href: "#home", icon: <AiOutlineHome /> },
-  { label: "About", href: "#about", icon: <AiOutlineUser /> },
+  { label: "Home", href: asset("#home"), icon: <AiOutlineHome /> },
+  { label: "About", href: asset("#about"), icon: <AiOutlineUser /> },
   {
     label: "Projects",
-    href: "#projects",
+    href: asset("#projects"),
     icon: <AiOutlineFundProjectionScreen />,
   },
-  { label: "Resume", href: "#resume", icon: <CgFileDocument /> },
+  { label: "Resume", href: asset("#resume"), icon: <CgFileDocument /> },
 ];
 
 export default function Navbar() {
@@ -158,7 +158,7 @@ export default function Navbar() {
     <header className={styles.navbar}>
       <div className={styles.left}>
         <a
-          href="/"
+          href={asset("")}
           className={styles.logo}
           onClick={(e) => {
             e.preventDefault();
