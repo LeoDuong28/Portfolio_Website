@@ -29,7 +29,7 @@ import styles from "./page.module.css";
 import { GitHubCalendar } from "react-github-calendar";
 const GITHUB_USERNAME = "LeoDuong28";
 
-export default function AboutPage(): JSX.Element {
+export default function AboutPage(): TSX.Element {
   const calendarRef = useRef<HTMLDivElement | null>(null);
   const [blockSize, setBlockSize] = useState<number>(12);
   const [blockMargin, setBlockMargin] = useState<number>(4);
