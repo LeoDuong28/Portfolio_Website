@@ -1,6 +1,5 @@
 "use client";
 
-
 import React from "react";
 import Image from "next/image";
 import { AiFillGithub } from "react-icons/ai";
@@ -9,9 +8,7 @@ import { SiIndeed, SiGmail } from "react-icons/si";
 import Type from "../components/Type";
 import Codeblock from "../components/Codeblock";
 import styles from "./home.module.css";
-
-
-
+import { asset } from "@/app/lib/asset";
 
 export default function Home() {
   return (
@@ -51,9 +48,8 @@ export default function Home() {
           <div className={styles.introRight}>
             <div className={styles.flipCard}>
               <div className={styles.flipInner}>
-
                 <Image
-                  src="/avatar.png"
+                  src={asset("/avatar.png")}
                   alt="avatar"
                   width={400}
                   height={400}
@@ -61,19 +57,17 @@ export default function Home() {
                 />
 
                 <Image
-                  src="/avatar2.png"
+                  src={asset("/avatar2.png")}
                   alt="leo-photo"
                   width={400}
                   height={400}
                   className={`${styles.avatarImage} ${styles.backImage}`}
                 />
-
               </div>
             </div>
           </div>
         </div>
       </section>
-
 
       <section className={styles.homeSocialContainer}>
         <div className={styles.homeSocialInner}>
@@ -87,8 +81,7 @@ export default function Home() {
                 href="https://github.com/LeoDuong28"
                 target="_blank"
                 rel="noreferrer"
-                className={styles.homeSocialIcons}
-              >
+                className={styles.homeSocialIcons}>
                 <AiFillGithub />
               </a>
             </li>
@@ -98,8 +91,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/your-linkedin"
                 target="_blank"
                 rel="noreferrer"
-                className={styles.homeSocialIcons}
-              >
+                className={styles.homeSocialIcons}>
                 <FaLinkedinIn />
               </a>
             </li>
@@ -109,19 +101,13 @@ export default function Home() {
                 href="https://profile.indeed.com/p/leod-wp087hl"
                 target="_blank"
                 rel="noreferrer"
-                className={styles.homeSocialIcons}
-              >
+                className={styles.homeSocialIcons}>
                 <SiIndeed />
               </a>
             </li>
-
           </ul>
         </div>
       </section>
-      
     </main>
   );
 }
-
-
-

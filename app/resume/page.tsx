@@ -3,6 +3,7 @@
 import React from "react";
 import { FaRegFilePdf } from "react-icons/fa";
 import styles from "./page.module.css";
+import { asset } from "@/app/lib/asset";
 const RESUME_PATH = "/Leo_Duong_Resume.pdf";
 
 export default function ResumePage() {
@@ -23,7 +24,7 @@ export default function ResumePage() {
 
         <div className={styles.viewerWrapper}>
           <iframe
-            src={RESUME_PATH}
+            src={asset(RESUME_PATH)}
             className={styles.viewer}
             title="Leo Duong Resume"
           />

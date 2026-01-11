@@ -4,8 +4,9 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import styles from "./page.module.css";
+import { asset } from "@/app/lib/asset";
 
-const THUMBNAIL = "/project-thumb.png";
+const THUMBNAIL = "./";
 
 type Project = {
   id: string;
@@ -32,7 +33,7 @@ const projects: Project[] = [
     tech: ["TypeScript", "React", "Node.js", "Next.js", "HTML", "CSS"],
     repo: "https://github.com/your-username/stinkbug",
     demo: "https://stinkbug-demo.example.com",
-    image: "/Porfolio_Website_Project_Picture.png",
+    image: asset("/portfolio_website.png"),
     featured: true,
   },
   {
@@ -46,7 +47,7 @@ const projects: Project[] = [
     ],
     tech: ["C++", "Algorithms"],
     repo: "https://github.com/your-username/huffman-cli",
-    image: "/project1.png",
+    image: asset("/e_commerce_website.png"),
   },
   {
     id: "p3",
@@ -60,7 +61,7 @@ const projects: Project[] = [
     tech: ["Next.js", "TypeScript", "TailwindCSS"],
     repo: "https://github.com/your-username/portfolio",
     demo: "https://your-portfolio.example.com",
-    image: THUMBNAIL,
+    image: asset("/blue_green_deployment.jpg"),
   },
   {
     id: "p4",
@@ -74,7 +75,7 @@ const projects: Project[] = [
     tech: ["Next.js", "TypeScript", "TailwindCSS"],
     repo: "https://github.com/your-username/portfolio",
     demo: "https://your-portfolio.example.com",
-    image: THUMBNAIL,
+    image: asset("/real_time_chat.jpg"),
   },
   {
     id: "p5",
@@ -88,7 +89,7 @@ const projects: Project[] = [
     tech: ["Next.js", "TypeScript", "TailwindCSS"],
     repo: "https://github.com/your-username/portfolio",
     demo: "https://your-portfolio.example.com",
-    image: THUMBNAIL,
+    image: asset("/netflix_clone.jpg"),
   },
   {
     id: "p6",
@@ -102,7 +103,7 @@ const projects: Project[] = [
     tech: ["Next.js", "TypeScript", "TailwindCSS"],
     repo: "https://github.com/your-username/portfolio",
     demo: "https://your-portfolio.example.com",
-    image: THUMBNAIL,
+    image: asset("/movie_recommend.jpeg"),
   },
 ];
 

@@ -10,6 +10,7 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
+import { asset } from "@/app/lib/asset";
 
 interface NavItem {
   label: string;
@@ -164,7 +165,11 @@ export default function Navbar() {
             window.location.reload();
           }}>
           <Image
-            src={theme === "light" ? "/logo_black1.png" : "/logo_black2.png"}
+            src={
+              theme === "light"
+                ? asset("/logo_black1.png")
+                : asset("/logo_black2.png")
+            }
             alt="Leo Duong Logo"
             width={80}
             height={80}
