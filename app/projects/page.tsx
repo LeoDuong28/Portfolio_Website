@@ -133,7 +133,7 @@ export default function ProjectsPage() {
           <div className={styles.ctaRow}>
             <a
               className={styles.primaryBtn}
-              href="https://github.com/LeoDuong28?tab=repositories"
+              href={asset("https://github.com/LeoDuong28?tab=repositories")}
               target="_blank"
               rel="noreferrer">
               <FaGithub /> View All on GitHub

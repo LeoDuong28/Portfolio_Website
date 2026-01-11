@@ -19,14 +19,14 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: "Home", href: asset("#home"), icon: <AiOutlineHome /> },
-  { label: "About", href: asset("#about"), icon: <AiOutlineUser /> },
+  { label: "Home", href: "#home", icon: <AiOutlineHome /> },
+  { label: "About", href: "#about", icon: <AiOutlineUser /> },
   {
     label: "Projects",
-    href: asset("#projects"),
+    href: "#projects",
     icon: <AiOutlineFundProjectionScreen />,
   },
-  { label: "Resume", href: asset("#resume"), icon: <CgFileDocument /> },
+  { label: "Resume", href: "#resume", icon: <CgFileDocument /> },
 ];
 
 export default function Navbar() {
@@ -170,7 +170,7 @@ export default function Navbar() {
                 ? asset("logo_black1.png")
                 : asset("logo_black2.png")
             }
-            alt="Leo Duong Logo"
+            alt="Logo"
             width={80}
             height={80}
             priority
