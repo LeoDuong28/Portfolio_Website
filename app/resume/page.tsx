@@ -5,7 +5,7 @@ import { FaRegFilePdf } from "react-icons/fa";
 import styles from "./page.module.css";
 import { asset } from "@/app/lib/asset";
 
-const RESUME_FILE = "leo_duong_resume.pdf";
+const RESUME_FILE = "Leo Duong Resume.pdf";
 
 export default function ResumePage() {
   // With your new asset.ts, this becomes "./leo_duong_resume.pdf"
